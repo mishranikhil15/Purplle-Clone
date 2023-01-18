@@ -1,9 +1,16 @@
 const express=require("express")
 const { connection } = require("./config/db")
 
-const app=express()
+const{ homerouter}=require("./routes/homeroute")
+const cors=require("cors")
 
 require("dotenv").config()
+
+const app=express()
+
+app.use(cors({
+    origin:"*"
+}))
 
 app.use(express.json())
 
@@ -11,7 +18,7 @@ app.get("/",(req,res)=>{
     res.send("welcome")
 })
 
-
+app.use("/homepage",homerouter)
 
 
 app.listen(process.env.port,async()=>{
