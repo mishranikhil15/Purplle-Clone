@@ -1,0 +1,36 @@
+ <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+               
+                <img  src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/275419/dermdoc-2-percentage-salicylic-acid-face-wash-for-oily-and-acne-prone-skin-type-120-ml-12_14_display_1671602516_3141d936.jpg">
+               
+            </div>
+            <div class="swiper-slide">
+                <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/132619/faces-magneteyes-eyeliner-black-01-3-5-ml_8_display_1633694684_eeb49626.jpg">
+            </div>
+            <div class="swiper-slide">
+               <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/230458/wow-skin-science-ubtan-foaming-face-wash-with-built-in-face-brush-100-ml-10_5_display_1614578705_e396f6ab.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/328775/bajaj-coconut-bajaj-coconut-oil-600ml_1_display_1669523936_13e2a010.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/336409/plum-green-tea-pore-cleansing-face-wash-75-ml_1_display_1663045075_d6470430.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/307716/dermdoc-skin-tightening-face-gel-with-hydrolyzed-collagen-50-g-for-all-skin-types-lightweight-absorbs-quickly-oil-free-moisturizer-skin-tightening-pore-tightening-cream-paraben-free-sulfate-free-cruelty-free-14_14_display_1667462130_86826adc.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/128244/faces-magneteyes-dramatic-volumizing-mascara-black-9-5-ml-35_5_display_1633694698_48465689.jpg">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/229850/wow-skin-science-brightening-vitamin-c-foaming-face-wash-with-built-in-face-brush-100-ml-20_2_display_1610696599_5159e63a.jpg">
+            </div>
+            <div class="swiper-slide">
+              <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/275683/dermdoc-anti-acne-facial-kit-with-salicylic-acid-34-g-17_16_display_1667464740_763efb64.jpg">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
