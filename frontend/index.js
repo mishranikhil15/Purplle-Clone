@@ -43,3 +43,5 @@ function render(arr){
         cont.append(div);
     })
 }
+
+

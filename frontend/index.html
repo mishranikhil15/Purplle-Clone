@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+    <linkrel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -65,8 +67,8 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
+    <div class="swiper mySwiper1" style="height: 70vh;width: 95vw;">
+        <div class="swiper-wrapper" >
             <div class="swiper-slide">
                
                 <img src="https://media6.ppl-media.com/tr:h-250,w-250,c-at_max,oi-AD_35x235_small_kJWM53nMn1.png,ow-60,ofo-top_right,dpr-2/static/img/product/275419/dermdoc-2-percentage-salicylic-acid-face-wash-for-oily-and-acne-prone-skin-type-120-ml-12_14_display_1671602516_3141d936.jpg">
@@ -102,7 +104,10 @@
         <div class="swiper-pagination"></div>
     </div>
 
-
+   <div class="banner">
+    <img width="1500px" src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1674099518_mamaearth_web_thick-strip.gif">
+    <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2,f-gif/mediafiles/ecomm/misc/1673939041_unmissable-deals_web_10.gif">
+   </div>
 
 
 
@@ -120,6 +125,26 @@
 <script>
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper1", {
+        slidesPerView: 5,
         spaceBetween: 30,
         loop: true,
         pagination: {
