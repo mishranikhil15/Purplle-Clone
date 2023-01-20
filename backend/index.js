@@ -2,6 +2,11 @@ const express=require("express")
 const { connection } = require("./config/db")
 
 const{ homerouter}=require("./routes/homeroute")
+
+const{ userrouter}=require("./routes/userroute")
+
+const{lipstickrouter}=require("./routes/lipstickroute")
+
 const cors=require("cors")
 
 require("dotenv").config()
@@ -19,7 +24,8 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/homepage",homerouter)
-
+app.use("/lipstick",lipstickrouter)
+app.use("/users",userrouter)
 
 app.listen(process.env.port,async()=>{
     try {

@@ -35,6 +35,32 @@ homerouter.post("/create",async(req,res)=>{
 
 })
 
+
+homerouter.patch("/:id", async (req, res) => {
+    const ID = req.params.id
+    const payload = req.body
+    try {
+        await Homemodel.findByIdAndUpdate({ _id: ID }, payload)
+        res.send(`updated the todo data whose id is ${ID}`)
+    } catch (error) {
+        console.log(error);
+        res.send({ "err": "something went wrong" })
+    }
+})
+
+
+homerouter.delete("/:id", async (req, res) => {
+    const ID = req.params.id
+    const payload = req.body
+    try {
+        await Homemodel.findByIdAndDelete({ _id: ID })
+        res.send(`Deleted the todo data whose id is ${ID}`)
+    } catch (error) {
+        console.log(error);
+        res.send({ "err": "something went wrong" })
+    }
+})
+
 module.exports={
     homerouter
 }
