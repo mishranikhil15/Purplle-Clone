@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="address.css">
+</head>
+<body>
+    <div id="all_entry">
+        <form autocomplete="on">
+            <h1> My Address </h1>
+           
+            <p>
+                <label for="fullName"   >Full Name</label><br/>
+                <input id="fullname"  required="required" type="text" />
+            </p>
+            <p>
+                <label for="mobileNo"   >Mobile Number</label><br/>
+                <input id="mobile"  required="required" type="number" />
+            </p>
+            <p>
+                <label for="Pin"   >Pincode/Zipcode</label><br/>
+                <input id="pincode"  required="required" type="number" />
+            </p>
+            <p>
+                <label for="city"  >City</label><br/>
+                <input id="city"  required="required" type="text" />
+            </p>
+            <p>
+                <label for="state" >State</label><br/>
+                <input id="state" required="required" type="text" />
+            </p>
+            <p>
+                <label for="flatNo" >Flat No/Building,Street Name</label><br/>
+                <input id="flatno"  required="required" type="text" />
+            </p>
+            <p>
+                <label for="area" >Area/Locality</label><br/>
+                <input id="area" required="required" type="text" />
+            </p>
+            <p>
+                <label for="landmark" >Landmark(optional)</label><br/>
+                <input id="landmark" required="required" type="text" />
+            </p>
+            <p class="addressButton">
+                <input type="submit" value="SAVE ADDRESS"/>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
+<script src="address.js"></script>

@@ -1,12 +1,12 @@
 const express = require("express")
 // const regex=require("regex")
 
-const { Lipstickmodel } = require("../models/lipstickmodel")
+const {  Primermodel } = require("../models/primermodel")
 
-const lipstickrouter = express.Router();
+const primerrouter = express.Router();
 
-lipstickrouter.get("/", async (req, res) => {
-    const { title1,country,price,rating,sortby, order } = req.query
+primerrouter.get("/", async (req, res) => {
+    const { title1,country,price,rating, sortby, order } = req.query
     let store = {};
     let sort = {}
     if (title1 != undefined && sortby != undefined && order != undefined) {
@@ -20,7 +20,7 @@ lipstickrouter.get("/", async (req, res) => {
         // console.log(8)
 
     } else if (title1 != undefined && order == undefined && sortby == undefined) {
-        store.title = { '$regex': title1, '$options': 'i' }; 
+        store.title = { '$regex': title1, '$options': 'i' };
         // sort={};
         console.log(store)
     } else if(country!=undefined) {
@@ -38,9 +38,10 @@ lipstickrouter.get("/", async (req, res) => {
     }
 
 
+
     try {
 
-        const data = await Lipstickmodel.find(store).sort(sort)
+        const data = await Primermodel.find(store).sort(sort)
         res.status(200).json(data)
 
 
@@ -50,11 +51,11 @@ lipstickrouter.get("/", async (req, res) => {
     }
 })
 
-lipstickrouter.post("/create", async (req, res) => {
+primerrouter.post("/create", async (req, res) => {
     const store = req.body;
 
     try {
-        const data = new Lipstickmodel(store);
+        const data = new Primermodel(store);
         await data.save();
         res.status(200).send("Posted the Data")
     } catch (error) {
@@ -64,11 +65,11 @@ lipstickrouter.post("/create", async (req, res) => {
 
 })
 
-lipstickrouter.patch("/:id", async (req, res) => {
+primerrouter.patch("/:id", async (req, res) => {
     const ID = req.params.id
     const payload = req.body
     try {
-        await Lipstickmodel.findByIdAndUpdate({ _id: ID }, payload)
+        await Primermodel.findByIdAndUpdate({ _id: ID }, payload)
         res.send(`updated the todo data whose id is ${ID}`)
     } catch (error) {
         console.log(error);
@@ -77,11 +78,11 @@ lipstickrouter.patch("/:id", async (req, res) => {
 })
 
 
-lipstickrouter.delete("/:id", async (req, res) => {
+primerrouter.delete("/:id", async (req, res) => {
     const ID = req.params.id
     const payload = req.body
     try {
-        await Lipstickmodel.findByIdAndDelete({ _id: ID })
+        await Primermodel.findByIdAndDelete({ _id: ID })
         res.send(`Deleted the todo data whose id is ${ID}`)
     } catch (error) {
         console.log(error);
@@ -91,5 +92,5 @@ lipstickrouter.delete("/:id", async (req, res) => {
 
 
 module.exports = {
-    lipstickrouter
+    primerrouter
 }

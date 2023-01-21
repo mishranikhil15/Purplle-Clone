@@ -52,11 +52,11 @@ userrouter.post("/login", async (req, res) => {
                     const token = jwt.sign({ course: 'backend', "userID": user[0]._id }, 'masai');
                     res.send({ "msg": "Login succesfull", "token": token })
                 } else {
-                    res.send("wrong credentials")
+                    res.json("wrong credentials")
                 }
             });
         } else {
-            res.send("wrong credentials")
+            res.send("Throw error")
         }
     } catch (error) {
         res.send("Error in logging the user")
