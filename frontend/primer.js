@@ -1,10 +1,9 @@
 const store = document.querySelector(".container")
+
 const filt=document.querySelector("#country")
 
 const rating=document.querySelector("#rating")
 const price=document.querySelector("#price")
-
-const token=localStorage.getItem("access_token")
 
 const search= document.querySelector("#searc");
 const search_btn=document.querySelector("#search_btn");
@@ -57,7 +56,7 @@ rating.addEventListener("change",()=>{
 ///////searchdata
 async function  getSearchdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/lipstick/?title1=${value}`, {
+        let out = await fetch(`http://localhost:4200/primer/?title1=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -82,9 +81,9 @@ async function  getSearchdata(value) {
 
 
 ////rating sorting
-async function getsort1data(value) {
+async function getsort1data(value) { 
     try {
-        let out = await fetch(`http://localhost:4200/lipstick/?rating=${value}`, {
+        let out = await fetch(`http://localhost:4200/primer/?rating=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -107,7 +106,7 @@ async function getsort1data(value) {
 ////price sort
 async function getsortdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/lipstick/?price=${value}`, {
+        let out = await fetch(`http://localhost:4200/primer/?price=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -131,7 +130,7 @@ async function getsortdata(value) {
 /////filterdata
 async function getfilterdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/lipstick/?country=${value}`, {
+        let out = await fetch(`http://localhost:4200/primer/?country=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -151,10 +150,9 @@ async function getfilterdata(value) {
     }
 }
 
-
 async function dispalydata() {
     try {
-        let out = await fetch("http://localhost:4200/lipstick/", {
+        let out = await fetch("http://localhost:4200/primer/", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -195,52 +193,17 @@ function render(res) {
         let title = document.createElement("h2")
         title.innerText = ele.title;
         let rating = document.createElement("p")
-        rating.innerText = "Rating " + ele.rating
+        rating.innerText = "Rating "+ele.rating
         let price = document.createElement("h4")
         price.innerText = "₹ "+ele.price;
         let btn = document.createElement("button")
         btn.innerText = "ADD TO CART";
         btn.addEventListener("click", () => {
-            let obj={
-             image:ele.image,
-                title:ele.title,
-                rating:ele.rating,
-                country:ele.country,
-                price:ele.price,
-
-            }
-            addcart(obj)
+            console.log(ele._id)
+            addcart(ele._id)
         })
         let hr = document.createElement("hr")
         div.append(img,title,rating,price,btn)
         store.append(div)
     })
-}
-
-async function addcart(obj) {
-    if(token==undefined){
-     console.log("Please Login First")
-    }
-    try {
-        let res = await fetch("http://localhost:4200/cart/create", {
-            body:JSON.stringify(obj),
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: token
-            }
-           
-        });
-        // console.log(res); 
-        if (res.ok) {
-            let out = await res.json();
-            console.log(out)
-            alert("Data added to cart")
-            // window.location.href="notes.html"
-        } else {
-            alert("cannot delete")
-        }
-    } catch (error) {
-        console.log(error)
-    }
 }
