@@ -4,13 +4,13 @@ btn.addEventListener("click", () => {
     let name = document.querySelector("#name").value;
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#pass").value;
-    let age = document.querySelector("#age").value;
-    if (name != "" && email != "" && password != "" && age != "") {
+    let gender = document.querySelector("#gender").value;
+    if (name != "" && email != "" && password != "" && gender != "") {
         let obj = {
             name,
             email,
             password,
-            age
+            gender
         }
         register(obj);
     }else{
