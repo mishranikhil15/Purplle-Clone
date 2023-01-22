@@ -7,10 +7,10 @@ const mongoose=require("mongoose")
 // password ==> String
 
 const UserSchema=mongoose.Schema({
-  name:String,
-  email:String,
-  gender:String,
-  password:String
+  name:{type:String,required:true},
+  email:{type:String,required:true},
+  gender:{type:String,required:true},
+  password:{type:String,required:true}
 })
 
   const Usermodel=mongoose.model("loggeduser",UserSchema)
