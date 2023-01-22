@@ -81,34 +81,42 @@
     color: rgb(140, 135, 135);
   }
 
-  #cart{
-    margin-top: 20px;
-   height: 25px;
-   width: 25px;
-   margin-right: 40px;
-   font-size: 28px;
- }
- #pay{
-   margin-top: 20px;
-   height: 25px;
-   width: 25px;
-   margin-right: 40px;
-   margin-left: 40px;
-   font-size: 30px;
- }
-
- .cont{
-  /* width: 70%; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:20px;
-  text-align: center;
-  align-items: center;
-  margin: auto;
-  margin-top: 30px;
- }
-
- .cont div {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   
-}
+  .container{
+    height: 50vh;
+           width: 25vw;
+           display: grid;
+           margin: auto;
+           place-content: center;
+           /* border: 1px solid red; */
+           text-align: center;
+           align-items: center;
+           /* background-color:  #216ce7; */
+           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+           border-radius: 30px;
+           background-color: whitesmoke;
+           margin-top: 80px;
+ }
+
+
+    .container>input {
+           padding: 15px;
+           width: 95%;
+           margin: auto;
+           border-radius: 7px;
+           margin-top: 10px;
+           border: 1px solid lightseagreen;
+
+       }
+
+        button {
+           padding: 15px;
+           width: 95%;
+           /* width: 100%; */
+           margin: auto;
+           background-color: #216ce7;
+           color: black;
+           border: 1px solid lightseagreen;
+           margin-top: 30px;
+           border-radius: 7px;
+       }
