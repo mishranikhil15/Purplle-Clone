@@ -56,12 +56,30 @@
   width: 25px;
   margin-right: 20px;
 }
-
+#cart{
+   margin-top: 20px;
+  height: 25px;
+  width: 25px;
+  margin-right: 40px;
+  font-size: 28px;
+}
+#pay{
+  margin-top: 20px;
+  height: 25px;
+  width: 25px;
+  margin-right: 40px;
+  margin-left: 40px;
+  font-size: 30px;
+}
 
 .hover1 {
   display: none;
   width: 50%;
   margin: auto;
+  position: absolute;
+  top: 5%;
+  right: 30%;
+  z-index: 1000;
   grid-template-columns: repeat(4, 1fr);
   background-color: whitesmoke;
   font-size: 15px;
@@ -76,6 +94,10 @@
   display: none;
   width: 50%;
   margin: auto;
+  position: absolute;
+  top: 5%;
+  right: 30%;
+  z-index: 1000;
   padding-left: 60px;
   grid-template-columns: repeat(4, 1fr);
   background-color: whitesmoke;

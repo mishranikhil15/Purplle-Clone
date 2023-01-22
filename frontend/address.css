@@ -81,7 +81,21 @@
     color: rgb(140, 135, 135);
   }
 
-
+  #cart{
+    margin-top: 20px;
+   height: 25px;
+   width: 25px;
+   margin-right: 40px;
+   font-size: 28px;
+ }
+ #pay{
+   margin-top: 20px;
+   height: 25px;
+   width: 25px;
+   margin-right: 40px;
+   margin-left: 40px;
+   font-size: 30px;
+ }
 
 
 

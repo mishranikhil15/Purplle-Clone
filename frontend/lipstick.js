@@ -220,29 +220,32 @@ function render(res) {
 async function addcart(obj) {
     if(token==undefined){
      console.log("Please Login First")
-    }
-    try {
-        let res = await fetch("http://localhost:4200/cart/create", {
-            body:JSON.stringify(obj),
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: token
+     alert("Please Login First")
+    }else{
+        try {
+            let res = await fetch("http://localhost:4200/cart/create", {
+                body:JSON.stringify(obj),
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: token
+                }
+               
+            });
+            // console.log(res); 
+            if (res.ok) {
+                let out = await res.json();
+                console.log(out)
+                alert("Data added to cart")
+                // window.location.href="notes.html"
+            } else {
+                alert("cannot add")
             }
-           
-        });
-        // console.log(res); 
-        if (res.ok) {
-            let out = await res.json();
-            console.log(out)
-            alert("Data added to cart")
-            // window.location.href="notes.html"
-        } else {
-            alert("cannot delete")
+        } catch (error) {
+            console.log(error)
         }
-    } catch (error) {
-        console.log(error)
     }
+    
 }
 
 
@@ -250,9 +253,12 @@ async function addcart(obj) {
 document.querySelector('#job').addEventListener('mouseover', () => {
     document.querySelector('.hover1').style.display = 'grid';
   })
-  document.querySelector('#job').addEventListener('mouseleave', () => {
-    document.querySelector('.hover1').style.display = 'none';
+document.querySelector('#job').addEventListener('mouseleave', () => {
+    setTimeout(()=>{
+      document.querySelector('.hover1').style.display = 'none';
+    },3000)
   })
+  
   
   document.querySelector('#recruit').addEventListener('mouseover', () => {
     document.querySelector('.hover2').style.display = 'grid';
