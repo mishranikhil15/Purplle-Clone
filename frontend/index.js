@@ -2,7 +2,7 @@ let cont=document.querySelector(".cont");
 
 async function getAlldata(type){
     try {
-      const res=await fetch(`http://localhost:4200/homepage/?type=${type}`,{
+      const res=await fetch(`https://relieved-outerwear-fish.cyclic.app/homepage/?type=${type}`,{
         method:"GET",
         headers:{
             'Content-Type':'application/json'
