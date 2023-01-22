@@ -1,9 +1,10 @@
 const store = document.querySelector(".container")
-
 const filt=document.querySelector("#country")
 
 const rating=document.querySelector("#rating")
 const price=document.querySelector("#price")
+
+const token=localStorage.getItem("access_token")
 
 const search= document.querySelector("#searc");
 const search_btn=document.querySelector("#search_btn");
@@ -199,8 +200,15 @@ function render(res) {
         let btn = document.createElement("button")
         btn.innerText = "ADD TO CART";
         btn.addEventListener("click", () => {
-            console.log(ele._id)
-            addcart(ele._id)
+           let obj={
+             image:ele.image,
+                title:ele.title,
+                rating:ele.rating,
+                country:ele.country,
+                price:ele.price,
+
+            }
+            addcart(obj)
         })
         let hr = document.createElement("hr")
         div.append(img,title,rating,price,btn)
@@ -208,6 +216,36 @@ function render(res) {
     })
 }
 
+async function addcart(obj) {
+    if(token==undefined){
+     console.log("Please Login First")
+     alert("Please Login First")
+    }else{
+        try {
+            let res = await fetch("http://localhost:4200/cart/create", {
+                body:JSON.stringify(obj),
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: token
+                }
+               
+            });
+            // console.log(res); 
+            if (res.ok) {
+                let out = await res.json();
+                console.log(out)
+                alert("Data added to cart")
+                // window.location.href="notes.html"
+            } else {
+                alert("cannot add")
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    
+}
 
 
 
