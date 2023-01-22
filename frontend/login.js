@@ -4,7 +4,7 @@ btn.addEventListener("click", () => {
     
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#pass").value;
-
+   if(email!=""&&password!=""){
     let obj = {
         
         email,
@@ -12,6 +12,10 @@ btn.addEventListener("click", () => {
         
     }
     login(obj);
+   }else{
+    alert("Please Fill In All The Fields")
+   }
+   
 })
 
 async function login(obj) {
@@ -37,3 +41,19 @@ async function login(obj) {
         console.log(error)
     }
 }
+
+
+document.querySelector('#job').addEventListener('mouseover', () => {
+    document.querySelector('.hover1').style.display = 'grid';
+  })
+  document.querySelector('#job').addEventListener('mouseleave', () => {
+    document.querySelector('.hover1').style.display = 'none';
+  })
+  
+  document.querySelector('#recruit').addEventListener('mouseover', () => {
+    document.querySelector('.hover2').style.display = 'grid';
+  })
+  document.querySelector('#recruit').addEventListener('mouseleave', () => {
+    document.querySelector('.hover2').style.display = 'none';
+  })
+  

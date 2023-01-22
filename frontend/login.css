@@ -1,0 +1,120 @@
+#navbar {
+    display: flex;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%), 0 1px 2px 0 rgb(0 0 0 / 10%),
+      0 2px 20px 0 rgb(0 0 0 / 20%);
+  }
+  
+  #nlogo {
+    width: 20%;
+    /* border: 1px solid blue; */
+  }
+  
+  #nlogo img {
+    padding-left: 15px;
+    /* padding-top: 25px; */
+    width: 70px;
+  }
+  
+  #mid {
+    display: flex;
+    justify-content: space-evenly;
+    width: 45%;
+    /* border: 1px solid blue; */
+  }
+  
+  #mid>div,
+  #last>div {
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    font-size: 12px;
+    /* font-weight: 700; */
+    line-height: 24px;
+  }
+  
+  #mid>div:hover,
+  #nlogo:hover {
+    background-color: rgb(214, 227, 241);
+  }
+  #last {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    /* border: 1px solid blue; */
+  }
+  
+  #last>img {
+    margin-top: 20px;
+    height: 25px;
+    width: 25px;
+    margin-right: 20px;
+  }
+.hover1 {
+    display: none;
+    width: 50%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: whitesmoke;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+  
+  .hover1 h4 {
+    color: rgb(168, 162, 162);
+  }
+  
+  .hover2 {
+    display: none;
+    width: 50%;
+    margin: auto;
+    padding-left: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: whitesmoke;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+  
+  .hover2 h4 {
+    color: rgb(140, 135, 135);
+  }
+  
+
+  .container{
+     height: 50vh;
+            width: 25vw;
+            display: grid;
+            margin: auto;
+            place-content: center;
+            /* border: 1px solid red; */
+            text-align: center;
+            align-items: center;
+            /* background-color:  #216ce7; */
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 30px;
+            background-color: whitesmoke;
+            margin-top: 80px;
+  }
+
+
+     .container>input {
+            padding: 15px;
+            width: 95%;
+            margin: auto;
+            border-radius: 7px;
+            margin-top: 10px;
+            border: 1px solid lightseagreen;
+
+        }
+
+         button {
+            padding: 15px;
+            width: 95%;
+            /* width: 100%; */
+            margin: auto;
+            background-color: #216ce7;
+            color: black;
+            border: 1px solid lightseagreen;
+            margin-top: 30px;
+            border-radius: 7px;
+        }

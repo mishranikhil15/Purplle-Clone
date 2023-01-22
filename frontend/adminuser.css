@@ -80,37 +80,4 @@
   .hover2 h4 {
     color: rgb(140, 135, 135);
   }
-
-
-
-
-
-
-h1{
-    margin-top: 10px; 
-    margin-bottom: 20px;
-    color: black;
- }
- #all_entry {
-     margin-left: 100px;
- }
- #all_entry form p input{
-     margin-bottom: 5px;
-     padding: 10px 200px;
-     border-radius: 10px;
-     border: 1px solid black;
- }
- #all_entry .addressButton>input{
-     padding:10px 235px;
-     background-color: rgb(50, 179, 230);
-     color: white;
-     border: 1px solid rgb(50, 179, 230);
- 
- }
- #all_entry .addressButton>input:hover{
-     cursor: pointer;
-     background-color: darkcyan;
- }
- #all_entry form p input:hover{
-     border: 1px solid rgb(50, 179, 230);
- }
+  

@@ -5,13 +5,19 @@ btn.addEventListener("click", () => {
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#pass").value;
     let age = document.querySelector("#age").value;
-    let obj = {
-        name,
-        email,
-        password,
-        age
+    if (name != "" && email != "" && password != "" && age != "") {
+        let obj = {
+            name,
+            email,
+            password,
+            age
+        }
+        register(obj);
+    }else{
+        alert("Please Fill In All The Fields")
     }
-    register(obj);
+
+    
 })
 
 async function register(obj) {
@@ -28,9 +34,26 @@ async function register(obj) {
             alert("user has been created")
             let out = await res.json();
             console.log(out);
-            window.location.href="login.html"
+            window.location.href = "login.html"
         }
     } catch (error) {
         console.log(error)
     }
 }
+
+
+
+document.querySelector('#job').addEventListener('mouseover', () => {
+    document.querySelector('.hover1').style.display = 'grid';
+  })
+  document.querySelector('#job').addEventListener('mouseleave', () => {
+    document.querySelector('.hover1').style.display = 'none';
+  })
+  
+  document.querySelector('#recruit').addEventListener('mouseover', () => {
+    document.querySelector('.hover2').style.display = 'grid';
+  })
+  document.querySelector('#recruit').addEventListener('mouseleave', () => {
+    document.querySelector('.hover2').style.display = 'none';
+  })
+  
