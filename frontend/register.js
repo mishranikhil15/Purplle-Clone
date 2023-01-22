@@ -22,7 +22,7 @@ btn.addEventListener("click", () => {
 
 async function register(obj) {
     try {
-        let res = await fetch("http://localhost:4200/users/register", {
+        let res = await fetch("https://relieved-outerwear-fish.cyclic.app/users/register", {
             body: JSON.stringify(obj),
             headers: {
                 "Content-Type": "application/json"

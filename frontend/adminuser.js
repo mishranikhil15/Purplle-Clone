@@ -8,7 +8,7 @@ user_detais_btn.addEventListener("click", () => {
 
 async function getAlluserData() {
     try {
-        const res = await fetch("http://localhost:4200/users/", {
+        const res = await fetch("https://relieved-outerwear-fish.cyclic.app/users/", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ user_address_btn1.addEventListener("click", () => {
 
 async function getAlluserData1() {
     try {
-        const res = await fetch("http://localhost:4200/address/", {
+        const res = await fetch("https://relieved-outerwear-fish.cyclic.app/address/", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ function render1(arr) {
 
 async function deletediv(ID) {
     try {
-        let res = await fetch(`http://localhost:4200/users/${ID}`, {
+        let res = await fetch(`https://relieved-outerwear-fish.cyclic.app/users/${ID}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -127,7 +127,7 @@ async function deletediv(ID) {
 ///address route////
 async function deletediv1(ID) {
     try {
-        let res = await fetch(`http://localhost:4200/address/${ID}`, {
+        let res = await fetch(`https://relieved-outerwear-fish.cyclic.app/address/${ID}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

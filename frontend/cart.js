@@ -4,7 +4,7 @@ const token=localStorage.getItem("access_token")
 
 async function  getallcartdata() {
     try {
-        let out = await fetch(`http://localhost:4200/cart/`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/cart/`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function render(res) {
 
 async function deletediv(ID){
     try {
-        let out = await fetch(`http://localhost:4200/cart/${ID}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/cart/${ID}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

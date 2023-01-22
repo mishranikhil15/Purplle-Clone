@@ -7,7 +7,7 @@ const store = document.querySelector(".cont")
 
 async function dispalynotes() {
     try {
-        let out = await fetch("http://localhost:4200/lipstick/", {
+        let out = await fetch("https://relieved-outerwear-fish.cyclic.app/lipstick/", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ dispalynotes1()
 
 async function dispalynotes1() {
     try {
-        let out = await fetch("http://localhost:4200/primer/", {
+        let out = await fetch("https://relieved-outerwear-fish.cyclic.app/primer/", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -82,7 +82,7 @@ function render(res) {
 
 async function deletediv(ID) {
     try {
-        let res = await fetch(`http://localhost:4200/lipstick/${ID}`, {
+        let res = await fetch(`https://relieved-outerwear-fish.cyclic.app/lipstick/${ID}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -106,7 +106,7 @@ async function deletediv(ID) {
 
 async function deletediv1(ID) {
     try {
-        let res = await fetch(`http://localhost:4200/primer/${ID}`, {
+        let res = await fetch(`https://relieved-outerwear-fish.cyclic.app/primer/${ID}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

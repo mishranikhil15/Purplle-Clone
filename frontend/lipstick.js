@@ -57,7 +57,7 @@ rating.addEventListener("change",()=>{
 ///////searchdata
 async function  getSearchdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/lipstick/?title1=${value}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/lipstick/?title1=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -84,7 +84,7 @@ async function  getSearchdata(value) {
 ////rating sorting
 async function getsort1data(value) {
     try {
-        let out = await fetch(`http://localhost:4200/lipstick/?rating=${value}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/lipstick/?rating=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -107,7 +107,7 @@ async function getsort1data(value) {
 ////price sort
 async function getsortdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/lipstick/?price=${value}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/lipstick/?price=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -131,7 +131,7 @@ async function getsortdata(value) {
 /////filterdata
 async function getfilterdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/lipstick/?country=${value}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/lipstick/?country=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -154,7 +154,7 @@ async function getfilterdata(value) {
 
 async function dispalydata() {
     try {
-        let out = await fetch("http://localhost:4200/lipstick/", {
+        let out = await fetch("https://relieved-outerwear-fish.cyclic.app/lipstick/", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -223,7 +223,7 @@ async function addcart(obj) {
      alert("Please Login First")
     }else{
         try {
-            let res = await fetch("http://localhost:4200/cart/create", {
+            let res = await fetch("https://relieved-outerwear-fish.cyclic.app/cart/create", {
                 body:JSON.stringify(obj),
                 method: "POST",
                 headers: {

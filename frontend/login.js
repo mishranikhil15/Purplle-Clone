@@ -21,7 +21,7 @@ btn.addEventListener("click", () => {
 
 async function login(obj) {
     try {
-        let res = await fetch("http://localhost:4200/users/login", {
+        let res = await fetch("https://relieved-outerwear-fish.cyclic.app/users/login", {
             body: JSON.stringify(obj),
             headers: {
                 "Content-Type": "application/json"

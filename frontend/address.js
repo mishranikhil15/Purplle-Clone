@@ -8,7 +8,7 @@ input_form_btn.addEventListener("submit",async (e)=>{
             obj[all_input_tag[i].id]=all_input_tag[i].value;
         }
         console.log(obj);
-        let res=await fetch("http://localhost:4200/address/create",{
+        let res=await fetch("https://relieved-outerwear-fish.cyclic.app/address/create",{
             method:'POST',
             headers:{
                 'Content-Type':"application/json"

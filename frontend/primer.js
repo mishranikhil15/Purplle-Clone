@@ -57,7 +57,7 @@ rating.addEventListener("change",()=>{
 ///////searchdata
 async function  getSearchdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/primer/?title1=${value}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/primer/?title1=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -84,7 +84,7 @@ async function  getSearchdata(value) {
 ////rating sorting
 async function getsort1data(value) { 
     try {
-        let out = await fetch(`http://localhost:4200/primer/?rating=${value}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/primer/?rating=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -107,7 +107,7 @@ async function getsort1data(value) {
 ////price sort
 async function getsortdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/primer/?price=${value}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/primer/?price=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -131,7 +131,7 @@ async function getsortdata(value) {
 /////filterdata
 async function getfilterdata(value) {
     try {
-        let out = await fetch(`http://localhost:4200/primer/?country=${value}`, {
+        let out = await fetch(`https://relieved-outerwear-fish.cyclic.app/primer/?country=${value}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -153,7 +153,7 @@ async function getfilterdata(value) {
 
 async function dispalydata() {
     try {
-        let out = await fetch("http://localhost:4200/primer/", {
+        let out = await fetch("https://relieved-outerwear-fish.cyclic.app/primer/", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -222,7 +222,7 @@ async function addcart(obj) {
      alert("Please Login First")
     }else{
         try {
-            let res = await fetch("http://localhost:4200/cart/create", {
+            let res = await fetch("https://relieved-outerwear-fish.cyclic.app/cart/create", {
                 body:JSON.stringify(obj),
                 method: "POST",
                 headers: {
