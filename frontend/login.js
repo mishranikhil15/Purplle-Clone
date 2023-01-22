@@ -47,7 +47,9 @@ document.querySelector('#job').addEventListener('mouseover', () => {
     document.querySelector('.hover1').style.display = 'grid';
   })
   document.querySelector('#job').addEventListener('mouseleave', () => {
-    document.querySelector('.hover1').style.display = 'none';
+    setTimeout(()=>{
+      document.querySelector('.hover1').style.display = 'none';
+    },3000)
   })
   
   document.querySelector('#recruit').addEventListener('mouseover', () => {
