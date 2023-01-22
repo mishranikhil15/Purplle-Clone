@@ -66,3 +66,20 @@ async function deletediv(ID) {
         console.log(error)
     }
 }
+
+
+
+document.querySelector('#job').addEventListener('mouseover', () => {
+    document.querySelector('.hover1').style.display = 'grid';
+  })
+  document.querySelector('#job').addEventListener('mouseleave', () => {
+    document.querySelector('.hover1').style.display = 'none';
+  })
+  
+  document.querySelector('#recruit').addEventListener('mouseover', () => {
+    document.querySelector('.hover2').style.display = 'grid';
+  })
+  document.querySelector('#recruit').addEventListener('mouseleave', () => {
+    document.querySelector('.hover2').style.display = 'none';
+  })
+  
