@@ -35,9 +35,10 @@ app.use("/homepage",homerouter)
 app.use("/lipstick",lipstickrouter)
 app.use("/primer",primerrouter)
 app.use("/users",userrouter)
+app.use("/address",addressrouter)
 app.use(authenticate)
 app.use("/cart",cartrouter)
-app.use("/address",addressrouter)
+
 
 app.listen(process.env.port,async()=>{
     try {

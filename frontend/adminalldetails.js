@@ -7,7 +7,7 @@ const store = document.querySelector(".cont")
 
 async function dispalynotes() {
     try {
-        let out = await fetch("http://localhost:4200/homepage/", {
+        let out = await fetch("http://localhost:4200/lipstick/", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -28,6 +28,29 @@ async function dispalynotes() {
 }
 
 dispalynotes();
+dispalynotes1()
+
+async function dispalynotes1() {
+    try {
+        let out = await fetch("http://localhost:4200/primer/", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+        console.log(out)
+        if (out.ok) {
+            let res = await out.json();
+            console.log(res);
+            render(res)
+            // alert("Data displayed")
+        } else {
+            alert("Not displayed")
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 
 // title
@@ -48,6 +71,7 @@ function render(res) {
         btn.innerText = "DELETE";
         btn.addEventListener("click", () => {
             console.log(ele._id)
+            deletediv1(ele._id)
             deletediv(ele._id)
         })
         let hr = document.createElement("hr")
@@ -58,7 +82,7 @@ function render(res) {
 
 async function deletediv(ID) {
     try {
-        let res = await fetch(`http://localhost:4200/homepage/${ID}`, {
+        let res = await fetch(`http://localhost:4200/lipstick/${ID}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -79,6 +103,29 @@ async function deletediv(ID) {
     }
 }
 
+
+async function deletediv1(ID) {
+    try {
+        let res = await fetch(`http://localhost:4200/primer/${ID}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json",
+                
+            }
+           
+        });
+        console.log(res); 
+        if (res.ok) {
+            let out = await res.json();
+            console.log(out)
+            window.location.href="adminalldetails.html"
+        } else {
+            alert("cannot delete")
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 
 document.querySelector('#job').addEventListener('mouseover', () => {
