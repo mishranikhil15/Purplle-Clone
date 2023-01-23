@@ -5,7 +5,8 @@ About
 Purple.com website sells cosmetic products online, we have cloned this website using Technologies HTML,CSS and Javascript, Nodejs, NPM packages, Mongodb Atlas, Mongoose.
 
 Description:
-This website's objective is to sell beauty cosmetic products online. We cloned this website in six days. You can access this cloned-website by visiting the link https://github.com/mishranikhil15/-abiding-bell-8807
+This website's objective is to sell beauty cosmetic products online. I cloned this website in five days. You can access this cloned-website by visiting the link https://github.com/mishranikhil15/-abiding-bell-8807
+<hr>
 
 Technologies Used:
 HTML
