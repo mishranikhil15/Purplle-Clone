@@ -1,6 +1,6 @@
 # -abiding-bell-8807
-Frontend link:-[frontend](https://startling-babka-330672.netlify.app/)
-Backend link:-[backend](https://relieved-outerwear-fish.cyclic.app/)
+Frontend link:-[frontend](https://startling-babka-330672.netlify.app/)<br>
+Backend link:-[backend](https://relieved-outerwear-fish.cyclic.app/)<br>
 About
 Purple.com website sells cosmetic products online, we have cloned this website using Technologies HTML,CSS and Javascript, Nodejs, NPM packages, Mongodb Atlas, Mongoose.
 <hr>
